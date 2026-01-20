@@ -50,3 +50,7 @@ class RegisterUser(Resource):
         db.session.commit()
 
         return {"message": f"User {user.username} created successfully"}, 201
+
+# Register the route
+api.add_resource(RegisterUser, "/register")
+# 
